@@ -35,3 +35,4 @@ A premium, professional digital experience for a boutique coffee roaster.
 - SQLite
 - Vanilla HTML/CSS/JS
 # velvetbean-web
+# velvetbean-web
