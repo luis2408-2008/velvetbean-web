@@ -23,6 +23,7 @@ if (process.env.SMTP_HOST && process.env.SMTP_USER) {
 
 // POST Order
 router.post('/orders', async (req, res) => {
+    console.log("📝 Received Order Request");
     const { name, email, address, items, total } = req.body;
 
     // 1. Validation
@@ -38,43 +39,49 @@ router.post('/orders', async (req, res) => {
     const params = [name, email, address, total, date, itemsString];
 
     try {
+        console.log("💾 Saving order to Database...");
         const result = await db.run(sql, params);
+        console.log("✅ Order saved. ID:", result.id);
         const orderId = result.id;
 
-        // 3. Send Email
+        // 3. Send Response IMMEDIATELY to prevent hang
+        // The user gets success, we handle email in background.
+        res.json({ message: "success", orderId: orderId });
+
+        // 4. Send Email (Background Process)
         if (transporter) {
-            try {
-                const htmlContent = generateOrderEmail(name, orderId, items, total, address);
+            console.log("📧 Attempting to send email in background...");
+            const htmlContent = generateOrderEmail(name, orderId, items, total, address);
 
-                let info = await transporter.sendMail({
-                    from: '"Velvet Bean" <' + process.env.SMTP_USER + '>',
-                    to: email,
-                    subject: `Order Confirmation #${orderId} - Velvet Bean`,
-                    html: htmlContent,
+            // Fire and forget (catch error to log it, don't await)
+            transporter.sendMail({
+                from: '"Velvet Bean" <' + process.env.SMTP_USER + '>',
+                to: email,
+                subject: `Order Confirmation #${orderId} - Velvet Bean`,
+                html: htmlContent,
+            })
+                .then(info => {
+                    console.log("✅ Email sent successfully: %s", info.messageId);
+                })
+                .catch(emailErr => {
+                    console.error("❌ Email failed to send:", emailErr.message);
+                    console.error("Check Render Environment Variables (SMTP_USER, SMTP_PASS).");
                 });
-
-                console.log("Message sent: %s", info.messageId);
-                res.json({ message: "success", orderId: orderId });
-
-            } catch (emailErr) {
-                console.error("Email Error:", emailErr);
-                res.json({ message: "success_email_failed", orderId: orderId, error: emailErr.message });
-            }
         } else {
-            console.log("No transporter. Email skipped.");
-            res.json({ message: "success_no_smtp", orderId: orderId });
+            console.log("⚠️ No transporter configured. Skipping email.");
         }
 
     } catch (err) {
-        console.error("DB Error:", err.message);
-        return res.status(500).json({ error: err.message });
+        console.error("❌ DB Error:", err.message);
+        if (!res.headersSent) {
+            return res.status(500).json({ error: "Database error: " + err.message });
+        }
     }
 });
 
 function generateOrderEmail(name, orderId, items, total, address) {
     const date = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
-    // ... HTML Generation Logic Same as Before ...
     const itemsHtml = items.map(item => `
         <tr>
             <td style="padding: 12px; border-bottom: 1px solid #333; color: #ddd;">
