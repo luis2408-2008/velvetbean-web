@@ -22,13 +22,16 @@ Your app is now ready for the cloud! Follow these steps to deploy it on Render (
    - **Build Command**: `npm install`
    - **Start Command**: `npm start`
 4. **Environment Variables** (Section lower down):
-   - Add `DATABASE_URL` = paste the *Internal Database URL* you copied earlier.
+   - Add `DATABASE_URL` = postgresql://cafeteria_db_zsn4_user:UtigBFk6jQE2Js9aKPcEd5NRbgqpumlG@dpg-d5mnlp6mcj7s73c6vuq0-a/cafeteria_db_zsn4
    - Add `SMTP_HOST` = `smtp.gmail.com`
-   - Add `SMTP_USER` = your email
-   - Add `SMTP_PASS` = your app password
+   - Add `SMTP_USER` = luismontoya200408@gmail.com
+   - Add `SMTP_PASS` = jkuz uazg yaiw kdrt
    - Add `SMTP_SECURE` = `true`
 5. Click **Create Web Service**.
 
 ## 🎉 Success!
 Render will detect the `DATABASE_URL`, connect to Postgres automatically (thanks to our new code), create the tables, and start your site. 
 Your site will be live at `https://velvet-bean.onrender.com` (or similar).
+
+
+postgresql://cafeteria_db_zsn4_user:UtigBFk6jQE2Js9aKPcEd5NRbgqpumlG@dpg-d5mnlp6mcj7s73c6vuq0-a/cafeteria_db_zsn4
