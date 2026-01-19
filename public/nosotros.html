@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Velvet Bean Coffee Roasters</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Velvet<span>Bean</span></a>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="nosotros.html" class="active">About</a></li>
+                <li><a href="contacto.html">Contact</a></li>
+                <li>
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-badge" class="cart-badge">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 60vh;">
+        <div class="hero-content">
+            <h1>Our Story</h1>
+            <p>From the mountain peaks to your cup.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 4rem; align-items: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="uploads/barista.jpg" alt="Our Barista"
+                        style="border-radius: 5px; box-shadow: var(--shadow-md);">
+                    <!-- Fallback or generate this image -->
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h2>The Art of Roasting</h2>
+                    <p style="margin-bottom: 1rem; margin-top: 1rem; color: #ccc;">
+                        Velvet Bean was founded in 2018 with a simple mission: to reveal the hidden flavors within every
+                        coffee bean.
+                        We believe that coffee is more than a caffeine fix—it's a ritual, a moment of pause, and a
+                        sensory experience.
+                    </p>
+                    <p style="color: #ccc;">
+                        We partner directly with small-lot farmers in Ethiopia, Colombia, and Guatemala, ensuring fair
+                        wages and sustainable practices.
+                        Our beans are roasted in small batches right here in Brew City, guaranteeing the freshest cup
+                        possible.
+                    </p>
+                    <br>
+                    <a href="menu.html" class="btn">Taste the Difference</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Values -->
+    <section class="section-padding" style="background-color: var(--color-bg-light);">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 3rem;">Our Values</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div>
+                    <i class="fas fa-leaf"
+                        style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                    <h3>Sustainability</h3>
+                    <p style="font-size: 0.9rem; color: #aaa;">Eco-friendly sourcing and packaging.</p>
+                </div>
+                <div>
+                    <i class="fas fa-hand-holding-heart"
+                        style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                    <h3>Community</h3>
+                    <p style="font-size: 0.9rem; color: #aaa;">Supporting local artists and events.</p>
+                </div>
+                <div>
+                    <i class="fas fa-award"
+                        style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                    <h3>Quality</h3>
+                    <p style="font-size: 0.9rem; color: #aaa;">Never compromising on flavor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <a href="index.html" class="logo">Velvet<span>Bean</span></a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>123 Coffee Lane, Brew City</p>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 2rem; font-size: 0.8rem; color: #666;">
+            &copy; 2024 Velvet Bean Coffee Roasters.
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

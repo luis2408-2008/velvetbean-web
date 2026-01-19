@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Bean Coffee Roasters | Premium Coffee</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Velvet<span>Bean</span></a>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="nosotros.html">About</a></li>
+                <li><a href="contacto.html">Contact</a></li>
+                <li>
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-badge" class="cart-badge">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Experience the Perfect Roast</h1>
+            <p>Artisan coffee, roasted with passion and brewed to perfection.</p>
+            <a href="menu.html" class="btn btn-primary">View Menu</a>
+            <a href="contacto.html" class="btn">Visit Us</a>
+        </div>
+    </header>
+
+    <!-- Highlights Section -->
+    <section class="section-padding">
+        <div class="container text-center">
+            <h2>Our Signature</h2>
+            <p style="max-width: 600px; margin: 1rem auto; color: var(--color-text-muted);">
+                At Velvet Bean, we source the finest beans from sustainable farms across the globe.
+                Our master roasters maximize the potential of every bean.
+            </p>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('uploads/coffee-1.jpg');"></div>
+                    <div class="product-info">
+                        <h3>Ethiopian Yirgacheffe</h3>
+                        <p class="price">$4.50</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('uploads/croissant.jpg');"></div>
+                    <div class="product-info">
+                        <h3>Almond Croissant</h3>
+                        <p class="price">$3.75</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('uploads/fresas.png');"></div>
+                    <!-- Placeholder if image not found -->
+                    <div class="product-info">
+                        <h3>Cold Brew Gold</h3>
+                        <p class="price">$5.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <a href="index.html" class="logo">Velvet<span>Bean</span></a>
+                <p style="margin-top:1rem; font-size: 0.9rem; color: #888;">
+                    Crafting memorable coffee moments since 2018.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Coffee Lane, Brew City</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> hello@velvetbean.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hours</h4>
+                <p>Mon - Fri: 7am - 8pm</p>
+                <p>Sat - Sun: 8am - 9pm</p>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 2rem; font-size: 0.8rem; color: #666;">
+            &copy; 2024 Velvet Bean Coffee Roasters. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

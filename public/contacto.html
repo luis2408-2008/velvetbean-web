@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Velvet Bean Coffee Roasters</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Velvet<span>Bean</span></a>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="nosotros.html">About</a></li>
+                <li><a href="contacto.html" class="active">Contact</a></li>
+                <li>
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-badge" class="cart-badge">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 50vh;">
+        <div class="hero-content">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+
+                <!-- Contact Info -->
+                <div>
+                    <h2 style="margin-bottom: 2rem;">Visit Us</h2>
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">Address</h4>
+                        <p style="color: #ccc;">123 Coffee Lane<br>Brew City, BC 90210</p>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">Opening Hours</h4>
+                        <p style="color: #ccc;">Mon - Fri: 7:00 AM - 8:00 PM</p>
+                        <p style="color: #ccc;">Sat - Sun: 8:00 AM - 9:00 PM</p>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">Contact</h4>
+                        <p style="color: #ccc;">+1 (555) 123-4567</p>
+                        <p style="color: #ccc;">hello@velvetbean.com</p>
+                    </div>
+
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/15551234567?text=Hello%20Velvet%20Bean!%20I%20would%20like%20to%20make%20a%20reservation."
+                        target="_blank" class="btn btn-primary"
+                        style="background-color: #25D366; border-color: #25D366; color: white;">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Form -->
+                <form onsubmit="event.preventDefault(); alert('Message sent! We will get back to you soon.');"
+                    style="background: var(--color-bg-light); padding: 2rem; border-radius: 5px;">
+                    <h3 style="margin-bottom: 1.5rem;">Send a Message</h3>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem;">Name</label>
+                        <input type="text" required
+                            style="width: 100%; padding: 10px; background: #333; border: 1px solid #444; color: white;">
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem;">Email</label>
+                        <input type="email" required
+                            style="width: 100%; padding: 10px; background: #333; border: 1px solid #444; color: white;">
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem;">Message</label>
+                        <textarea rows="5" required
+                            style="width: 100%; padding: 10px; background: #333; border: 1px solid #444; color: white;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <a href="index.html" class="logo">Velvet<span>Bean</span></a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>123 Coffee Lane, Brew City</p>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 2rem; font-size: 0.8rem; color: #666;">
+            &copy; 2024 Velvet Bean Coffee Roasters.
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
